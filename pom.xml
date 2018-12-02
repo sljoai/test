@@ -13,6 +13,4 @@
         <module>test4redis</module>
         <module>test4grpc</module>
     </modules>
-
-
 </project>
