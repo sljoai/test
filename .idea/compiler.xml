@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="test4grpc" />
+        <module name="test4kafka" />
         <module name="test4redis" />
       </profile>
     </annotationProcessing>
