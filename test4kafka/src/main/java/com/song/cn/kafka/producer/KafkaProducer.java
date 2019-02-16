@@ -36,9 +36,10 @@ public class KafkaProducer {
         for(int i = 0; i < 10; i++) {
             System.out.println(i);
             // send record to topic 'test'
-            Future<RecordMetadata> metadata = producer.send(new ProducerRecord<String, String>("test", "key"+ Integer.toString(i), "value" + Integer.toString(i)));
+            Future<RecordMetadata> record = producer.send(new ProducerRecord<String, String>("test", "key" + Integer.toString(i), "value" + Integer.toString(i)));
             try {
-                metadata.get();
+                RecordMetadata metadata = record.get();
+                long offset = metadata.offset();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {

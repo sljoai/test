@@ -60,13 +60,14 @@ public class KafkaConsumer1 {
             }
             //取消息数据
             ConsumerRecords<String, String> records = consumer.poll(1000);
+            records.count();
             System.out.println("第 "+i+" 次");
 //            for (ConsumerRecord<String, String> record : records)
 //                System.out.printf("partion = %d, offset = %d, key = %s, value = %s%n", record.partition(),record.offset(), record.key(), record.value());
             //数据处理
             for(TopicPartition partition:records.partitions()){
                 List<ConsumerRecord<String,String>> partitionRecords = records.records(partition);
-                for (ConsumerRecord<String, String> record : records){
+                for (ConsumerRecord<String, String> record : partitionRecords) {
                     System.out.printf("partion = %d, offset = %d, key = %s, value = %s%n", record.partition(),record.offset(), record.key(), record.value());
                 }
                 //取得当前分区下读取的最后一条记录的offset
