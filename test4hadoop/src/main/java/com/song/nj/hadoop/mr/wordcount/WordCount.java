@@ -64,7 +64,7 @@ public class WordCount {
     String outHdfsPath = "/hadoop/test/output";
     Files.deleteFile(outHdfsPath);
 
-    Job job = new Job(Conf.get(), "word count");
+    Job job = Job.getInstance(Conf.get(), "word count");
     job.setJarByClass(WordCount.class);
     job.setMapperClass(TokenizerMapper.class);
     job.setCombinerClass(IntSumReducer.class);

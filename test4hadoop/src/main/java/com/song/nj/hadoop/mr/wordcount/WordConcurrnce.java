@@ -99,8 +99,6 @@ public class WordConcurrnce {
         String outHdfsPath = "/hadoop/test/output";
         Files.deleteFile(outHdfsPath);
 
-
-
         Job wordConcurrenceJob = Job.getInstance(Conf.get());
         wordConcurrenceJob.setJobName("wordConcurrenceJob");
         wordConcurrenceJob.setJarByClass(WordConcurrnce.class);
