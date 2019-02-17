@@ -13,5 +13,6 @@
         <module>test4redis</module>
         <module>test4grpc</module>
         <module>test4kafka</module>
+        <module>test4hadoop</module>
     </modules>
 </project>

@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="test4grpc" />
+        <module name="test4hadoop" />
         <module name="test4kafka" />
         <module name="test4redis" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="testmr" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
