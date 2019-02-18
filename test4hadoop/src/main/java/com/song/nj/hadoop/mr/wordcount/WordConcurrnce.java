@@ -92,11 +92,13 @@ public class WordConcurrnce {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         String localPath = "D:\\Java\\SRC\\test\\input\\";
-        String fileName = "test.txt";
-        String inHdfsPath = "/hadoop/test/input";
-        Files.uploadFile(localPath,fileName,inHdfsPath);
+        String fileName1 = "test1.txt";
+        String fileName2 = "test2.txt";
+        String inHdfsPath = "/hadoop/test/input/";
+        Files.uploadFile(localPath,fileName1,inHdfsPath);
+        Files.uploadFile(localPath,fileName2,inHdfsPath);
 
-        String outHdfsPath = "/hadoop/test/output";
+        String outHdfsPath = "/hadoop/test/output/";
         Files.deleteFile(outHdfsPath);
 
         Job wordConcurrenceJob = Job.getInstance(Conf.get());

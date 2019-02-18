@@ -1,0 +1,672 @@
+2019-02-17 17:56:46  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-02-17 17:56:46  [ main:7 ] - [ ERROR ]  Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:132)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:124)
+	at com.song.nj.hadoop.mr.wordcount.WordConcurrnce.main(WordConcurrnce.java:92)
+2019-02-17 17:56:47  [ main:265 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2019-02-17 17:56:47  [ main:287 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2019-02-17 18:08:17  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-02-17 18:08:17  [ main:6 ] - [ ERROR ]  Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.hadoop.mapreduce.task.JobContextImpl.<init>(JobContextImpl.java:72)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:145)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:132)
+	at org.apache.hadoop.mapreduce.Job.<init>(Job.java:124)
+	at com.song.nj.hadoop.mr.wordcount.WordConcurrnce.main(WordConcurrnce.java:92)
+2019-02-17 18:08:17  [ main:94 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2019-02-17 18:08:17  [ main:95 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2019-02-17 18:09:50  [ main:0 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2019-02-17 18:09:50  [ main:3 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2019-02-17 18:09:50  [ main:219 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 18:09:50  [ main:225 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 18:09:50  [ main:470 ] - [ INFO ]  Total input paths to process : 1
+2019-02-17 18:09:50  [ main:501 ] - [ INFO ]  number of splits:1
+2019-02-17 18:09:51  [ main:631 ] - [ INFO ]  Submitting tokens for job: job_local1432039972_0001
+2019-02-17 18:09:51  [ main:939 ] - [ INFO ]  The url to track the job: http://localhost:8080/
+2019-02-17 18:09:51  [ main:940 ] - [ INFO ]  Running job: job_local1432039972_0001
+2019-02-17 18:09:51  [ Thread-5:942 ] - [ INFO ]  OutputCommitter set in config null
+2019-02-17 18:09:51  [ Thread-5:954 ] - [ INFO ]  OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2019-02-17 18:09:51  [ Thread-5:1009 ] - [ INFO ]  Waiting for map tasks
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1009 ] - [ INFO ]  Starting task: attempt_local1432039972_0001_m_000000_0
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1033 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1212 ] - [ INFO ]   Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@4fdadbf6
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1218 ] - [ INFO ]  Processing split: file:/D:/Java/SRC/test/input/test.txt:0+73
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1303 ] - [ INFO ]  (EQUATOR) 0 kvi 26214396(104857584)
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1303 ] - [ INFO ]  mapreduce.task.io.sort.mb: 100
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1303 ] - [ INFO ]  soft limit at 83886080
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1304 ] - [ INFO ]  bufstart = 0; bufvoid = 104857600
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1304 ] - [ INFO ]  kvstart = 26214396; length = 6553600
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1307 ] - [ INFO ]  Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1315 ] - [ INFO ]  
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1315 ] - [ INFO ]  Starting flush of map output
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1315 ] - [ INFO ]  Spilling map output
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1315 ] - [ INFO ]  bufstart = 0; bufend = 1352; bufvoid = 104857600
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1316 ] - [ INFO ]  kvstart = 26214396(104857584); kvend = 26214008(104856032); length = 389/6553600
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1358 ] - [ INFO ]  Finished spill 0
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1372 ] - [ INFO ]  Task:attempt_local1432039972_0001_m_000000_0 is done. And is in the process of committing
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1380 ] - [ INFO ]  map
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1381 ] - [ INFO ]  Task 'attempt_local1432039972_0001_m_000000_0' done.
+2019-02-17 18:09:51  [ LocalJobRunner Map Task Executor #0:1381 ] - [ INFO ]  Finishing task: attempt_local1432039972_0001_m_000000_0
+2019-02-17 18:09:51  [ Thread-5:1381 ] - [ INFO ]  map task executor complete.
+2019-02-17 18:09:51  [ Thread-5:1384 ] - [ INFO ]  Waiting for reduce tasks
+2019-02-17 18:09:51  [ pool-3-thread-1:1384 ] - [ INFO ]  Starting task: attempt_local1432039972_0001_r_000000_0
+2019-02-17 18:09:51  [ pool-3-thread-1:1391 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2019-02-17 18:09:52  [ pool-3-thread-1:1648 ] - [ INFO ]   Using ResourceCalculatorProcessTree : org.apache.hadoop.yarn.util.WindowsBasedProcessTree@2d4b300c
+2019-02-17 18:09:52  [ pool-3-thread-1:1653 ] - [ INFO ]  Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@cef525b
+2019-02-17 18:09:52  [ pool-3-thread-1:1666 ] - [ INFO ]  MergerManager: memoryLimit=2663330560, maxSingleShuffleLimit=665832640, mergeThreshold=1757798272, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2019-02-17 18:09:52  [ EventFetcher for fetching Map Completion Events:1668 ] - [ INFO ]  attempt_local1432039972_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2019-02-17 18:09:52  [ localfetcher#1:1705 ] - [ INFO ]  localfetcher#1 about to shuffle output of map attempt_local1432039972_0001_m_000000_0 decomp: 1550 len: 1554 to MEMORY
+2019-02-17 18:09:52  [ localfetcher#1:1714 ] - [ INFO ]  Read 1550 bytes from map-output for attempt_local1432039972_0001_m_000000_0
+2019-02-17 18:09:52  [ localfetcher#1:1735 ] - [ INFO ]  closeInMemoryFile -> map-output of size: 1550, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->1550
+2019-02-17 18:09:52  [ EventFetcher for fetching Map Completion Events:1736 ] - [ INFO ]  EventFetcher is interrupted.. Returning
+2019-02-17 18:09:52  [ pool-3-thread-1:1737 ] - [ INFO ]  1 / 1 copied.
+2019-02-17 18:09:52  [ pool-3-thread-1:1737 ] - [ INFO ]  finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+2019-02-17 18:09:52  [ pool-3-thread-1:1765 ] - [ INFO ]  Merging 1 sorted segments
+2019-02-17 18:09:52  [ pool-3-thread-1:1765 ] - [ INFO ]  Down to the last merge-pass, with 1 segments left of total size: 1539 bytes
+2019-02-17 18:09:52  [ pool-3-thread-1:1772 ] - [ INFO ]  Merged 1 segments, 1550 bytes to disk to satisfy reduce memory limit
+2019-02-17 18:09:52  [ pool-3-thread-1:1774 ] - [ INFO ]  Merging 1 files, 1554 bytes from disk
+2019-02-17 18:09:52  [ pool-3-thread-1:1775 ] - [ INFO ]  Merging 0 segments, 0 bytes from memory into reduce
+2019-02-17 18:09:52  [ pool-3-thread-1:1775 ] - [ INFO ]  Merging 1 sorted segments
+2019-02-17 18:09:52  [ pool-3-thread-1:1777 ] - [ INFO ]  Down to the last merge-pass, with 1 segments left of total size: 1539 bytes
+2019-02-17 18:09:52  [ pool-3-thread-1:1777 ] - [ INFO ]  1 / 1 copied.
+2019-02-17 18:09:52  [ pool-3-thread-1:1795 ] - [ INFO ]  mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2019-02-17 18:09:52  [ pool-3-thread-1:1810 ] - [ INFO ]  Task:attempt_local1432039972_0001_r_000000_0 is done. And is in the process of committing
+2019-02-17 18:09:52  [ pool-3-thread-1:1812 ] - [ INFO ]  1 / 1 copied.
+2019-02-17 18:09:52  [ pool-3-thread-1:1813 ] - [ INFO ]  Task attempt_local1432039972_0001_r_000000_0 is allowed to commit now
+2019-02-17 18:09:52  [ pool-3-thread-1:1821 ] - [ INFO ]  Saved output of task 'attempt_local1432039972_0001_r_000000_0' to file:/D:/Java/SRC/test/output/_temporary/0/task_local1432039972_0001_r_000000
+2019-02-17 18:09:52  [ pool-3-thread-1:1822 ] - [ INFO ]  reduce > reduce
+2019-02-17 18:09:52  [ pool-3-thread-1:1823 ] - [ INFO ]  Task 'attempt_local1432039972_0001_r_000000_0' done.
+2019-02-17 18:09:52  [ pool-3-thread-1:1823 ] - [ INFO ]  Finishing task: attempt_local1432039972_0001_r_000000_0
+2019-02-17 18:09:52  [ Thread-5:1823 ] - [ INFO ]  reduce task executor complete.
+2019-02-17 18:09:52  [ main:1944 ] - [ INFO ]  Job job_local1432039972_0001 running in uber mode : false
+2019-02-17 18:09:52  [ main:1949 ] - [ INFO ]   map 100% reduce 100%
+2019-02-17 18:09:52  [ main:1950 ] - [ INFO ]  Job job_local1432039972_0001 completed successfully
+2019-02-17 18:09:52  [ main:1975 ] - [ INFO ]  Counters: 33
+	File System Counters
+		FILE: Number of bytes read=3598
+		FILE: Number of bytes written=509796
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=1
+		Map output records=98
+		Map output bytes=1352
+		Map output materialized bytes=1554
+		Input split bytes=102
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=81
+		Reduce shuffle bytes=1554
+		Reduce input records=98
+		Reduce output records=81
+		Spilled Records=196
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=514850816
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=73
+	File Output Format Counters 
+		Bytes Written=822
+2019-02-17 21:31:03  [ main:0 ] - [ ERROR ]  创建失败Permission denied: user=95, access=WRITE, inode="/":root:supergroup:drwxr-xr-x
+	at org.apache.hadoop.hdfs.server.namenode.DefaultAuthorizationProvider.checkFsPermission(DefaultAuthorizationProvider.java:257)
+	at org.apache.hadoop.hdfs.server.namenode.DefaultAuthorizationProvider.check(DefaultAuthorizationProvider.java:238)
+	at org.apache.hadoop.hdfs.server.namenode.DefaultAuthorizationProvider.check(DefaultAuthorizationProvider.java:216)
+	at org.apache.hadoop.hdfs.server.namenode.DefaultAuthorizationProvider.checkPermission(DefaultAuthorizationProvider.java:145)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.checkPermission(FSPermissionChecker.java:138)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:6345)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkPermission(FSNamesystem.java:6327)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkAncestorAccess(FSNamesystem.java:6279)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.mkdirsInternal(FSNamesystem.java:4146)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.mkdirsInt(FSNamesystem.java:4116)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.mkdirs(FSNamesystem.java:4089)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.mkdirs(NameNodeRpcServer.java:821)
+	at org.apache.hadoop.hdfs.server.namenode.AuthorizationProviderProxyClientProtocol.mkdirs(AuthorizationProviderProxyClientProtocol.java:297)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.mkdirs(ClientNamenodeProtocolServerSideTranslatorPB.java:594)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:587)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:1026)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2013)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2009)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1642)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2007)
+
+2019-02-17 21:40:53  [ main:0 ] - [ INFO ]  创建文件夹成功：/hadoop/test/input
+2019-02-17 22:05:55  [ main:0 ] - [ ERROR ]  上传文件失败D:\Java\SRC\test\inputtest.txt (系统找不到指定的文件。)
+2019-02-17 22:06:41  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:07:24  [ main:42890 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:07:28  [ main:46595 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:07:28  [ main:46629 ] - [ INFO ]  Cleaning up the staging area /tmp/hadoop-yarn/staging/95/.staging/job_1508422681312_0001
+2019-02-17 22:15:09  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:15:09  [ main:74 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:15:10  [ main:316 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:15:10  [ main:329 ] - [ INFO ]  Cleaning up the staging area /tmp/hadoop-yarn/staging/95/.staging/job_1508422681312_0002
+2019-02-17 22:20:22  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:20:22  [ main:75 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:20:22  [ main:215 ] - [ INFO ]  Permissions on staging directory /tmp/hadoop-yarn/staging/95/.staging are incorrect: rwxrwxrwx. Fixing permissions to correct value rwx------
+2019-02-17 22:20:22  [ main:330 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:20:22  [ main:338 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 22:20:22  [ main:366 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 22:20:22  [ main:482 ] - [ INFO ]  number of splits:0
+2019-02-17 22:20:22  [ main:635 ] - [ INFO ]  Submitting tokens for job: job_1508422681312_0003
+2019-02-17 22:20:23  [ main:945 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 22:20:23  [ main:1281 ] - [ INFO ]  Submitted application application_1508422681312_0003
+2019-02-17 22:20:23  [ main:1469 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508422681312_0003/
+2019-02-17 22:20:23  [ main:1469 ] - [ INFO ]  Running job: job_1508422681312_0003
+2019-02-17 22:20:35  [ main:13317 ] - [ INFO ]  Job job_1508422681312_0003 running in uber mode : false
+2019-02-17 22:20:35  [ main:13318 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 22:20:35  [ main:13450 ] - [ INFO ]  Job job_1508422681312_0003 failed with state FAILED due to: Application application_1508422681312_0003 failed 2 times due to AM Container for appattempt_1508422681312_0003_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508422681312_0003_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 22:20:35  [ main:13464 ] - [ INFO ]  Counters: 0
+2019-02-17 22:26:14  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:26:14  [ main:75 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:26:14  [ main:327 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:26:14  [ main:338 ] - [ INFO ]  Cleaning up the staging area /tmp/hadoop-yarn/staging/95/.staging/job_1508422681312_0004
+2019-02-17 22:26:43  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:26:43  [ main:74 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:26:43  [ main:322 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:26:43  [ main:334 ] - [ INFO ]  Cleaning up the staging area /tmp/hadoop-yarn/staging/95/.staging/job_1508422681312_0005
+2019-02-17 22:33:17  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:33:17  [ main:78 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:33:18  [ main:338 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:33:18  [ main:349 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 22:33:18  [ main:362 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 22:33:18  [ main:418 ] - [ INFO ]  number of splits:0
+2019-02-17 22:33:18  [ main:503 ] - [ INFO ]  Submitting tokens for job: job_1508422681312_0006
+2019-02-17 22:33:18  [ main:601 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 22:33:18  [ main:643 ] - [ INFO ]  Submitted application application_1508422681312_0006
+2019-02-17 22:33:18  [ main:669 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508422681312_0006/
+2019-02-17 22:33:18  [ main:670 ] - [ INFO ]  Running job: job_1508422681312_0006
+2019-02-17 22:33:22  [ main:4693 ] - [ INFO ]  Job job_1508422681312_0006 running in uber mode : false
+2019-02-17 22:33:22  [ main:4695 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 22:33:22  [ main:4704 ] - [ INFO ]  Job job_1508422681312_0006 failed with state FAILED due to: Application application_1508422681312_0006 failed 2 times due to AM Container for appattempt_1508422681312_0006_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508422681312_0006_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 22:33:22  [ main:4717 ] - [ INFO ]  Counters: 0
+2019-02-17 22:33:51  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:33:51  [ main:72 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:33:51  [ main:323 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:33:51  [ main:334 ] - [ INFO ]  Cleaning up the staging area /tmp/hadoop-yarn/staging/95/.staging/job_1508422681312_0007
+2019-02-17 22:36:04  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:36:04  [ main:70 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:36:04  [ main:321 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:36:04  [ main:331 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 22:36:04  [ main:343 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 22:36:05  [ main:392 ] - [ INFO ]  number of splits:0
+2019-02-17 22:36:05  [ main:471 ] - [ INFO ]  Submitting tokens for job: job_1508422681312_0008
+2019-02-17 22:36:05  [ main:554 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 22:36:05  [ main:588 ] - [ INFO ]  Submitted application application_1508422681312_0008
+2019-02-17 22:36:05  [ main:611 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508422681312_0008/
+2019-02-17 22:36:05  [ main:611 ] - [ INFO ]  Running job: job_1508422681312_0008
+2019-02-17 22:36:08  [ main:3636 ] - [ INFO ]  Job job_1508422681312_0008 running in uber mode : false
+2019-02-17 22:36:08  [ main:3637 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 22:36:08  [ main:3647 ] - [ INFO ]  Job job_1508422681312_0008 failed with state FAILED due to: Application application_1508422681312_0008 failed 2 times due to AM Container for appattempt_1508422681312_0008_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508422681312_0008_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 22:36:08  [ main:3661 ] - [ INFO ]  Counters: 0
+2019-02-17 22:54:11  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:54:11  [ main:65 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:54:11  [ main:359 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:54:11  [ main:398 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 22:54:11  [ main:411 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 22:54:11  [ main:509 ] - [ INFO ]  number of splits:0
+2019-02-17 22:54:11  [ main:609 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0001
+2019-02-17 22:54:11  [ main:691 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 22:54:12  [ main:957 ] - [ INFO ]  Submitted application application_1508427022469_0001
+2019-02-17 22:54:12  [ main:1023 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0001/
+2019-02-17 22:54:12  [ main:1023 ] - [ INFO ]  Running job: job_1508427022469_0001
+2019-02-17 22:54:22  [ main:11065 ] - [ INFO ]  Job job_1508427022469_0001 running in uber mode : false
+2019-02-17 22:54:22  [ main:11066 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 22:54:22  [ main:11078 ] - [ INFO ]  Job job_1508427022469_0001 failed with state FAILED due to: Application application_1508427022469_0001 failed 2 times due to AM Container for appattempt_1508427022469_0001_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508427022469_0001_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 22:54:22  [ main:11091 ] - [ INFO ]  Counters: 0
+2019-02-17 22:56:09  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:56:09  [ main:73 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 22:56:09  [ main:323 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 22:56:09  [ main:333 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 22:56:09  [ main:345 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 22:56:09  [ main:429 ] - [ INFO ]  number of splits:0
+2019-02-17 22:56:09  [ main:518 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0002
+2019-02-17 22:56:09  [ main:601 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 22:56:09  [ main:637 ] - [ INFO ]  Submitted application application_1508427022469_0002
+2019-02-17 22:56:09  [ main:663 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0002/
+2019-02-17 22:56:09  [ main:665 ] - [ INFO ]  Running job: job_1508427022469_0002
+2019-02-17 22:56:20  [ main:11082 ] - [ INFO ]  Job job_1508427022469_0002 running in uber mode : false
+2019-02-17 22:56:20  [ main:11083 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 22:56:26  [ main:17401 ] - [ INFO ]  Task Id : attempt_1508427022469_0002_r_000000_0, Status : FAILED
+2019-02-17 22:56:31  [ main:22458 ] - [ INFO ]  Task Id : attempt_1508427022469_0002_r_000000_1, Status : FAILED
+2019-02-17 22:56:36  [ main:27483 ] - [ INFO ]  Task Id : attempt_1508427022469_0002_r_000000_2, Status : FAILED
+2019-02-17 22:56:41  [ main:32526 ] - [ INFO ]   map 0% reduce 100%
+2019-02-17 22:56:42  [ main:33537 ] - [ INFO ]  Job job_1508427022469_0002 failed with state FAILED due to: Task failed task_1508427022469_0002_r_000000
+Job failed as tasks failed. failedMaps:0 failedReduces:1
+
+2019-02-17 22:56:42  [ main:33653 ] - [ INFO ]  Counters: 7
+	Job Counters 
+		Failed reduce tasks=4
+		Launched reduce tasks=4
+		Total time spent by all maps in occupied slots (ms)=0
+		Total time spent by all reduces in occupied slots (ms)=12097
+		Total time spent by all reduce tasks (ms)=12097
+		Total vcore-milliseconds taken by all reduce tasks=12097
+		Total megabyte-milliseconds taken by all reduce tasks=12387328
+2019-02-17 22:57:59  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 22:57:59  [ main:72 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:01:45  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:01:45  [ main:94 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:01:46  [ main:352 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:01:46  [ main:361 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 23:01:46  [ main:375 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:01:46  [ main:427 ] - [ INFO ]  number of splits:0
+2019-02-17 23:01:46  [ main:506 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0003
+2019-02-17 23:01:46  [ main:589 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 23:01:46  [ main:628 ] - [ INFO ]  Submitted application application_1508427022469_0003
+2019-02-17 23:01:46  [ main:652 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0003/
+2019-02-17 23:01:46  [ main:652 ] - [ INFO ]  Running job: job_1508427022469_0003
+2019-02-17 23:01:55  [ main:10023 ] - [ INFO ]  Job job_1508427022469_0003 running in uber mode : false
+2019-02-17 23:01:55  [ main:10024 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:02:01  [ main:16115 ] - [ INFO ]  Task Id : attempt_1508427022469_0003_r_000000_0, Status : FAILED
+2019-02-17 23:02:07  [ main:22164 ] - [ INFO ]  Task Id : attempt_1508427022469_0003_r_000000_1, Status : FAILED
+2019-02-17 23:02:11  [ main:26185 ] - [ INFO ]  Task Id : attempt_1508427022469_0003_r_000000_2, Status : FAILED
+2019-02-17 23:02:18  [ main:33213 ] - [ INFO ]   map 0% reduce 100%
+2019-02-17 23:02:18  [ main:33219 ] - [ INFO ]  Job job_1508427022469_0003 failed with state FAILED due to: Task failed task_1508427022469_0003_r_000000
+Job failed as tasks failed. failedMaps:0 failedReduces:1
+
+2019-02-17 23:02:19  [ main:33325 ] - [ INFO ]  Counters: 7
+	Job Counters 
+		Failed reduce tasks=4
+		Launched reduce tasks=4
+		Total time spent by all maps in occupied slots (ms)=0
+		Total time spent by all reduces in occupied slots (ms)=12709
+		Total time spent by all reduce tasks (ms)=12709
+		Total vcore-milliseconds taken by all reduce tasks=12709
+		Total megabyte-milliseconds taken by all reduce tasks=13014016
+2019-02-17 23:09:36  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:09:36  [ main:91 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:09:36  [ main:348 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:09:36  [ main:358 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 23:09:36  [ main:369 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:09:36  [ main:417 ] - [ INFO ]  number of splits:0
+2019-02-17 23:09:36  [ main:491 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0004
+2019-02-17 23:09:37  [ main:573 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 23:09:37  [ main:610 ] - [ INFO ]  Submitted application application_1508427022469_0004
+2019-02-17 23:09:37  [ main:633 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0004/
+2019-02-17 23:09:37  [ main:633 ] - [ INFO ]  Running job: job_1508427022469_0004
+2019-02-17 23:09:44  [ main:7994 ] - [ INFO ]  Job job_1508427022469_0004 running in uber mode : false
+2019-02-17 23:09:44  [ main:7995 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:09:50  [ main:14055 ] - [ INFO ]  Task Id : attempt_1508427022469_0004_r_000000_0, Status : FAILED
+2019-02-17 23:09:56  [ main:20104 ] - [ INFO ]  Task Id : attempt_1508427022469_0004_r_000000_1, Status : FAILED
+2019-02-17 23:10:01  [ main:25136 ] - [ INFO ]  Task Id : attempt_1508427022469_0004_r_000000_2, Status : FAILED
+2019-02-17 23:10:08  [ main:32169 ] - [ INFO ]   map 0% reduce 100%
+2019-02-17 23:10:08  [ main:32176 ] - [ INFO ]  Job job_1508427022469_0004 failed with state FAILED due to: Task failed task_1508427022469_0004_r_000000
+Job failed as tasks failed. failedMaps:0 failedReduces:1
+
+2019-02-17 23:10:08  [ main:32280 ] - [ INFO ]  Counters: 7
+	Job Counters 
+		Failed reduce tasks=4
+		Launched reduce tasks=4
+		Total time spent by all maps in occupied slots (ms)=0
+		Total time spent by all reduces in occupied slots (ms)=12616
+		Total time spent by all reduce tasks (ms)=12616
+		Total vcore-milliseconds taken by all reduce tasks=12616
+		Total megabyte-milliseconds taken by all reduce tasks=12918784
+2019-02-17 23:10:51  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:10:51  [ main:94 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:10:52  [ main:343 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:10:52  [ main:353 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 23:10:52  [ main:365 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:10:52  [ main:416 ] - [ INFO ]  number of splits:0
+2019-02-17 23:10:52  [ main:495 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0005
+2019-02-17 23:10:52  [ main:616 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 23:10:52  [ main:654 ] - [ INFO ]  Submitted application application_1508427022469_0005
+2019-02-17 23:10:52  [ main:678 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0005/
+2019-02-17 23:10:52  [ main:678 ] - [ INFO ]  Running job: job_1508427022469_0005
+2019-02-17 23:10:57  [ main:6024 ] - [ INFO ]  Job job_1508427022469_0005 running in uber mode : false
+2019-02-17 23:10:57  [ main:6026 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:11:03  [ main:12158 ] - [ INFO ]   map 0% reduce 100%
+2019-02-17 23:11:03  [ main:12166 ] - [ INFO ]  Task Id : attempt_1508427022469_0005_r_000000_0, Status : FAILED
+2019-02-17 23:11:04  [ main:13189 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:11:09  [ main:17210 ] - [ INFO ]  Task Id : attempt_1508427022469_0005_r_000000_1, Status : FAILED
+2019-02-17 23:11:14  [ main:22238 ] - [ INFO ]  Task Id : attempt_1508427022469_0005_r_000000_2, Status : FAILED
+2019-02-17 23:11:20  [ main:28269 ] - [ INFO ]   map 0% reduce 100%
+2019-02-17 23:11:20  [ main:28278 ] - [ INFO ]  Job job_1508427022469_0005 failed with state FAILED due to: Task failed task_1508427022469_0005_r_000000
+Job failed as tasks failed. failedMaps:0 failedReduces:1
+
+2019-02-17 23:11:20  [ main:28378 ] - [ INFO ]  Counters: 7
+	Job Counters 
+		Failed reduce tasks=4
+		Launched reduce tasks=4
+		Total time spent by all maps in occupied slots (ms)=0
+		Total time spent by all reduces in occupied slots (ms)=11357
+		Total time spent by all reduce tasks (ms)=11357
+		Total vcore-milliseconds taken by all reduce tasks=11357
+		Total megabyte-milliseconds taken by all reduce tasks=11629568
+2019-02-17 23:12:32  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:12:32  [ main:97 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:12:32  [ main:356 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:12:32  [ main:366 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 23:12:32  [ main:378 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:12:32  [ main:425 ] - [ INFO ]  number of splits:0
+2019-02-17 23:12:32  [ main:499 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0006
+2019-02-17 23:12:33  [ main:584 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 23:12:33  [ main:621 ] - [ INFO ]  Submitted application application_1508427022469_0006
+2019-02-17 23:12:33  [ main:645 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0006/
+2019-02-17 23:12:33  [ main:645 ] - [ INFO ]  Running job: job_1508427022469_0006
+2019-02-17 23:12:39  [ main:6891 ] - [ INFO ]  Job job_1508427022469_0006 running in uber mode : false
+2019-02-17 23:12:39  [ main:6892 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:12:43  [ main:11070 ] - [ INFO ]  Task Id : attempt_1508427022469_0006_r_000000_0, Status : FAILED
+2019-02-17 23:12:49  [ main:17119 ] - [ INFO ]  Task Id : attempt_1508427022469_0006_r_000000_1, Status : FAILED
+2019-02-17 23:12:54  [ main:22143 ] - [ INFO ]  Task Id : attempt_1508427022469_0006_r_000000_2, Status : FAILED
+2019-02-17 23:13:00  [ main:28174 ] - [ INFO ]   map 0% reduce 100%
+2019-02-17 23:13:00  [ main:28180 ] - [ INFO ]  Job job_1508427022469_0006 failed with state FAILED due to: Task failed task_1508427022469_0006_r_000000
+Job failed as tasks failed. failedMaps:0 failedReduces:1
+
+2019-02-17 23:13:00  [ main:28291 ] - [ INFO ]  Counters: 7
+	Job Counters 
+		Failed reduce tasks=4
+		Launched reduce tasks=4
+		Total time spent by all maps in occupied slots (ms)=0
+		Total time spent by all reduces in occupied slots (ms)=10931
+		Total time spent by all reduce tasks (ms)=10931
+		Total vcore-milliseconds taken by all reduce tasks=10931
+		Total megabyte-milliseconds taken by all reduce tasks=11193344
+2019-02-17 23:28:17  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:28:17  [ main:103 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:28:17  [ main:369 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:28:17  [ main:424 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:28:17  [ main:472 ] - [ INFO ]  number of splits:0
+2019-02-17 23:28:18  [ main:546 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0007
+2019-02-17 23:28:18  [ main:667 ] - [ INFO ]  Submitted application application_1508427022469_0007
+2019-02-17 23:28:18  [ main:691 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0007/
+2019-02-17 23:28:18  [ main:691 ] - [ INFO ]  Running job: job_1508427022469_0007
+2019-02-17 23:28:27  [ main:9730 ] - [ INFO ]  Job job_1508427022469_0007 running in uber mode : false
+2019-02-17 23:28:27  [ main:9731 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:28:27  [ main:9739 ] - [ INFO ]  Job job_1508427022469_0007 failed with state FAILED due to: Application application_1508427022469_0007 failed 2 times due to AM Container for appattempt_1508427022469_0007_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508427022469_0007_02_000001
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 23:28:27  [ main:9753 ] - [ INFO ]  Counters: 0
+2019-02-17 23:30:22  [ main:1 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:30:22  [ main:103 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:30:23  [ main:360 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:30:23  [ main:370 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 23:30:23  [ main:382 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:30:23  [ main:429 ] - [ INFO ]  number of splits:0
+2019-02-17 23:30:23  [ main:506 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0008
+2019-02-17 23:30:23  [ main:599 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 23:30:23  [ main:633 ] - [ INFO ]  Submitted application application_1508427022469_0008
+2019-02-17 23:30:23  [ main:657 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0008/
+2019-02-17 23:30:23  [ main:658 ] - [ INFO ]  Running job: job_1508427022469_0008
+2019-02-17 23:30:26  [ main:3676 ] - [ INFO ]  Job job_1508427022469_0008 running in uber mode : false
+2019-02-17 23:30:26  [ main:3677 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:30:26  [ main:3686 ] - [ INFO ]  Job job_1508427022469_0008 failed with state FAILED due to: Application application_1508427022469_0008 failed 2 times due to AM Container for appattempt_1508427022469_0008_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508427022469_0008_02_000001
+Exit code: 1
+Exception message: /bin/bash: line 0: fg: no job control
+
+Stack trace: ExitCodeException exitCode=1: /bin/bash: line 0: fg: no job control
+
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 23:30:26  [ main:3701 ] - [ INFO ]  Counters: 0
+2019-02-17 23:30:47  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:30:47  [ main:99 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:30:48  [ main:352 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:30:48  [ main:361 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2019-02-17 23:30:48  [ main:373 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:30:48  [ main:429 ] - [ INFO ]  number of splits:0
+2019-02-17 23:30:48  [ main:510 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0009
+2019-02-17 23:30:48  [ main:595 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2019-02-17 23:30:48  [ main:630 ] - [ INFO ]  Submitted application application_1508427022469_0009
+2019-02-17 23:30:48  [ main:654 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0009/
+2019-02-17 23:30:48  [ main:655 ] - [ INFO ]  Running job: job_1508427022469_0009
+2019-02-17 23:30:54  [ main:6819 ] - [ INFO ]  Job job_1508427022469_0009 running in uber mode : false
+2019-02-17 23:30:54  [ main:6820 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:30:58  [ main:10867 ] - [ INFO ]  Task Id : attempt_1508427022469_0009_r_000000_0, Status : FAILED
+2019-02-17 23:31:04  [ main:16913 ] - [ INFO ]  Task Id : attempt_1508427022469_0009_r_000000_1, Status : FAILED
+2019-02-17 23:31:09  [ main:21937 ] - [ INFO ]  Task Id : attempt_1508427022469_0009_r_000000_2, Status : FAILED
+2019-02-17 23:31:15  [ main:27964 ] - [ INFO ]   map 0% reduce 100%
+2019-02-17 23:31:15  [ main:27971 ] - [ INFO ]  Job job_1508427022469_0009 failed with state FAILED due to: Task failed task_1508427022469_0009_r_000000
+Job failed as tasks failed. failedMaps:0 failedReduces:1
+
+2019-02-17 23:31:15  [ main:28066 ] - [ INFO ]  Counters: 7
+	Job Counters 
+		Failed reduce tasks=4
+		Launched reduce tasks=4
+		Total time spent by all maps in occupied slots (ms)=0
+		Total time spent by all reduces in occupied slots (ms)=10729
+		Total time spent by all reduce tasks (ms)=10729
+		Total vcore-milliseconds taken by all reduce tasks=10729
+		Total megabyte-milliseconds taken by all reduce tasks=10986496
+2019-02-17 23:32:45  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:32:45  [ main:112 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:32:46  [ main:377 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:32:46  [ main:427 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:32:46  [ main:472 ] - [ INFO ]  number of splits:0
+2019-02-17 23:32:46  [ main:554 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0010
+2019-02-17 23:32:46  [ main:672 ] - [ INFO ]  Submitted application application_1508427022469_0010
+2019-02-17 23:32:46  [ main:694 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0010/
+2019-02-17 23:32:46  [ main:695 ] - [ INFO ]  Running job: job_1508427022469_0010
+2019-02-17 23:32:55  [ main:9730 ] - [ INFO ]  Job job_1508427022469_0010 running in uber mode : false
+2019-02-17 23:32:55  [ main:9730 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:32:55  [ main:9739 ] - [ INFO ]  Job job_1508427022469_0010 failed with state FAILED due to: Application application_1508427022469_0010 failed 2 times due to AM Container for appattempt_1508427022469_0010_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508427022469_0010_02_000001
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 23:32:55  [ main:9752 ] - [ INFO ]  Counters: 0
+2019-02-17 23:35:53  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:35:54  [ main:89 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:35:54  [ main:342 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:35:54  [ main:392 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:35:54  [ main:433 ] - [ INFO ]  number of splits:0
+2019-02-17 23:35:54  [ main:504 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0013
+2019-02-17 23:35:54  [ main:625 ] - [ INFO ]  Submitted application application_1508427022469_0013
+2019-02-17 23:35:54  [ main:648 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0013/
+2019-02-17 23:35:54  [ main:648 ] - [ INFO ]  Running job: job_1508427022469_0013
+2019-02-17 23:36:02  [ main:8682 ] - [ INFO ]  Job job_1508427022469_0013 running in uber mode : false
+2019-02-17 23:36:02  [ main:8684 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:36:02  [ main:8692 ] - [ INFO ]  Job job_1508427022469_0013 failed with state FAILED due to: Application application_1508427022469_0013 failed 2 times due to AM Container for appattempt_1508427022469_0013_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508427022469_0013_02_000001
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 23:36:02  [ main:8705 ] - [ INFO ]  Counters: 0
+2019-02-17 23:48:43  [ main:0 ] - [ INFO ]  上传文件成功：test.txt
+2019-02-17 23:48:43  [ main:97 ] - [ INFO ]  Connecting to ResourceManager at sparkproject1/192.168.80.238:8032
+2019-02-17 23:48:43  [ main:479 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2019-02-17 23:48:43  [ main:542 ] - [ INFO ]  Total input paths to process : 0
+2019-02-17 23:48:43  [ main:596 ] - [ INFO ]  number of splits:0
+2019-02-17 23:48:43  [ main:683 ] - [ INFO ]  Submitting tokens for job: job_1508427022469_0015
+2019-02-17 23:48:44  [ main:829 ] - [ INFO ]  Submitted application application_1508427022469_0015
+2019-02-17 23:48:44  [ main:855 ] - [ INFO ]  The url to track the job: http://sparkproject1:8088/proxy/application_1508427022469_0015/
+2019-02-17 23:48:44  [ main:856 ] - [ INFO ]  Running job: job_1508427022469_0015
+2019-02-17 23:48:54  [ main:10896 ] - [ INFO ]  Job job_1508427022469_0015 running in uber mode : false
+2019-02-17 23:48:54  [ main:10898 ] - [ INFO ]   map 0% reduce 0%
+2019-02-17 23:48:54  [ main:10906 ] - [ INFO ]  Job job_1508427022469_0015 failed with state FAILED due to: Application application_1508427022469_0015 failed 2 times due to AM Container for appattempt_1508427022469_0015_000002 exited with  exitCode: 1 due to: Exception from container-launch.
+Container id: container_1508427022469_0015_02_000001
+Exit code: 1
+Stack trace: ExitCodeException exitCode=1: 
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:538)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:702)
+	at org.apache.hadoop.yarn.server.nodemanager.DefaultContainerExecutor.launchContainer(DefaultContainerExecutor.java:197)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:299)
+	at org.apache.hadoop.yarn.server.nodemanager.containermanager.launcher.ContainerLaunch.call(ContainerLaunch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+2019-02-17 23:48:54  [ main:10919 ] - [ INFO ]  Counters: 0
