@@ -7,6 +7,10 @@
     <file url="file://$PROJECT_DIR$/test4hadoop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test4hadoop/src/main/java/com/song/nj/hadoop/mr/index/InvertedIndexer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test4hadoop/src/main/java/com/song/nj/hadoop/mr/index/SimpleInvertedIndex.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test4hadoop/src/main/java/com/song/nj/hadoop/mr/pagerank/GraphBuilder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test4hadoop/src/main/java/com/song/nj/hadoop/mr/pagerank/PageRankDriver.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test4hadoop/src/main/java/com/song/nj/hadoop/mr/pagerank/PageRankIter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test4hadoop/src/main/java/com/song/nj/hadoop/mr/pagerank/PageRankViewer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test4hadoop/src/main/java/com/song/nj/hadoop/mr/wordcount/WordConcurrnce.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test4kafka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test4kafka/src/main/java/com/song/cn/kafka/comsumer/KafkaConsumer.java" charset="UTF-8" />

@@ -9,7 +9,7 @@ public class RunHadoop {
     }
 
     public static void main(String[] args) {
-        String directory = "/hadoop/test/input";
+        String directory = "/hadoop/test/pagerank";
         Files.mkdirFolder(directory);
     }
 }
