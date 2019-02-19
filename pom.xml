@@ -14,5 +14,9 @@
         <module>test4grpc</module>
         <module>test4kafka</module>
         <module>test4hadoop</module>
+        <module>test4bf</module>
     </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>

@@ -16,12 +16,12 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * ½ÓÊÕÊı¾İ
- * ½ÓÊÕµ½: message: 10
-½ÓÊÕµ½: message: 11
-½ÓÊÕµ½: message: 12
-½ÓÊÕµ½: message: 13
-½ÓÊÕµ½: message: 14
+ * æ¥æ”¶æ•°æ®
+ * æ¥æ”¶åˆ°: message: 10
+æ¥æ”¶åˆ°: message: 11
+æ¥æ”¶åˆ°: message: 12
+æ¥æ”¶åˆ°: message: 13
+æ¥æ”¶åˆ°: message: 14
  * @author zm
  *
  */
@@ -45,26 +45,26 @@ public class KafkaConsumer extends Thread{
 	public void run() {
 		ConsumerConnector consumer = createConsumer();
 		Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
-		topicCountMap.put(topic, 1); // Ò»´Î´ÓÖ÷ÌâÖĞ»ñÈ¡Ò»¸öÊı¾İ
+		topicCountMap.put(topic, 1); // ä¸€æ¬¡ä»ä¸»é¢˜ä¸­è·å–ä¸€ä¸ªæ•°æ®
 		 Map<String, List<KafkaStream<byte[], byte[]>>>  messageStreams = consumer.createMessageStreams(topicCountMap);
-		 KafkaStream<byte[], byte[]> stream = messageStreams.get(topic).get(0);// »ñÈ¡Ã¿´Î½ÓÊÕµ½µÄÕâ¸öÊı¾İ
+		 KafkaStream<byte[], byte[]> stream = messageStreams.get(topic).get(0);// è·å–æ¯æ¬¡æ¥æ”¶åˆ°çš„è¿™ä¸ªæ•°æ®
 		 ConsumerIterator<byte[], byte[]> iterator =  stream.iterator();
 		 while(iterator.hasNext()){
 			 String message = new String(iterator.next().message());
-			 System.out.println("½ÓÊÕµ½: " + message);
+			 System.out.println("æ¥æ”¶åˆ°: " + message);
 		 }
 	}
 
 	private ConsumerConnector createConsumer() {
 		Properties properties = new Properties();
-		properties.put("zookeeper.connect", "192.168.80.235:2181,192.168.80.235:2182,192.168.80.235:2183");//ÉùÃ÷zk
+		properties.put("zookeeper.connect", "192.168.80.235:2181,192.168.80.235:2182,192.168.80.235:2183");//å£°æ˜zk
 		properties.put("group.id", "group1");
 		return Consumer.createJavaConsumerConnector(new ConsumerConfig(properties));
 	 }
 	
 	
 	public static void main(String[] args) {
-		new KafkaConsumer("test").start();// Ê¹ÓÃkafka¼¯ÈºÖĞ´´½¨ºÃµÄÖ÷Ìâ test
+		new KafkaConsumer("test").start();// ä½¿ç”¨kafkaé›†ç¾¤ä¸­åˆ›å»ºå¥½çš„ä¸»é¢˜ test
 		
 	}
 	 
