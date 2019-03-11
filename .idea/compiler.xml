@@ -9,6 +9,7 @@
         <module name="test4bf" />
         <module name="test4grpc" />
         <module name="test4hadoop" />
+        <module name="test4java" />
         <module name="test4kafka" />
         <module name="test4redis" />
       </profile>
@@ -23,6 +24,7 @@
       <module name="test4bf" options="" />
       <module name="test4grpc" options="" />
       <module name="test4hadoop" options="" />
+      <module name="test4java" options="" />
       <module name="test4kafka" options="" />
       <module name="test4redis" options="" />
     </option>
