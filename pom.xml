@@ -16,6 +16,7 @@
         <module>test4hadoop</module>
         <module>test4bf</module>
         <module>test4java</module>
+        <module>test4relation</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

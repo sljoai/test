@@ -1,0 +1,46 @@
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+
+syntax="proto3";
+
+option java_multiple_files = true;
+option java_package = "com.fiberhome.daml.analysis.grpc";
+option java_outer_classname = "DataRelationServiceProto";
+option objc_class_prefix = "DRP";
+
+package grpc;
+
+//service definition
+service DataRelationService{
+    rpc datarelation (DataRelationRequest) returns (DataRelationReply) {};
+
+}
+
+//request message
+message DataRelationRequest {
+    string source_ip_port=1;//数据源为LocalFS时，可以为空
+    string source_type=2;//LocalFS(01)、Kafka(02)
+    string source_location=3;//本地：目录，Kafka：json格式
+    string process_type=4;//处理类型：默认本地（01），可能为02
+    string basedb_ip=5;//基库
+    string makesure_relation=6;//待确认关系类型
+    string message_id=7;//消息ID
+    string meta_data_type=8;//元数据文件类型，默认为bjson
+    string basedb_type=9;//基库类型，默认为redis
+    string output_type=10;//输出类型
+    string output_location=11;//本地
+    string output_ip_port=12;
+    string kafka_ip_port=13;
+}
+
+//response message
+message DataRelationReply{
+    bool isSuccess=1;
+    string info=2;
+}

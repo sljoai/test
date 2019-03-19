@@ -17,6 +17,7 @@
     <file url="file://$PROJECT_DIR$/test4kafka/src/main/java/com/song/cn/kafka/comsumer/KafkaConsumer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test4kafka/src/main/java/com/song/cn/kafka/producer/KafkaProducer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test4redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test4relation" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

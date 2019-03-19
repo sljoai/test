@@ -17,6 +17,7 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.log4j.PropertyConfigurator;
@@ -44,6 +45,7 @@ public class WordConcurrnce {
         @Override
         protected void setup(Context context) throws IOException, InterruptedException {
             windowSize = Math.min(context.getConfiguration().getInt("window", 2), MAX_WINDOW);
+            FileSplit fileSplit = (FileSplit) context.getInputSplit();
         }
 
         /**

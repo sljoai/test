@@ -1,0 +1,18 @@
+syntax="proto3";
+
+package com.daml.progress;
+
+service TaskProgressService{
+    rpc progress(ProgressRequest) returns(ProgressReplay){}
+}
+
+//request message
+message ProgressRequest {
+    string message_id=1;
+}
+
+//response message
+message ProgressReplay{
+    string message_id=1;
+    string info=2;
+}
