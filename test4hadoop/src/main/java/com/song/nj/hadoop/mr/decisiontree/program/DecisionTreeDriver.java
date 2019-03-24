@@ -1,16 +1,10 @@
 package com.song.nj.hadoop.mr.decisiontree.program;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Scanner;
-
+import com.song.nj.hadoop.conf.Conf;
+import com.song.nj.hadoop.hdfs.Files;
+import com.song.nj.hadoop.mr.decisiontree.datatype.NodeStatisticInfo;
+import com.song.nj.hadoop.mr.decisiontree.datatype.Rule;
+import com.song.nj.hadoop.mr.decisiontree.datatype.StatisticRecord;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.*;
@@ -20,15 +14,20 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.log4j.PropertyConfigurator;
 
-import com.song.nj.hadoop.mr.decisiontree.datatype.NodeStatisticInfo;
-import com.song.nj.hadoop.mr.decisiontree.datatype.Rule;
-import com.song.nj.hadoop.mr.decisiontree.datatype.StatisticRecord;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.*;
 
 /**
  * 整个算法的驱动程序。
  */
 public class DecisionTreeDriver {
+
+    static {
+        PropertyConfigurator.configure("conf/log4j.properties");
+    }
 
     // 属性取值的值域范围，数据结构的第一维代表属性ID，
     // 第二维列表表示该属性的所有可能离散取值。
@@ -43,27 +42,43 @@ public class DecisionTreeDriver {
     static Configuration conf = new Configuration();
 
     public static void main(String[] args) throws Exception {
+
+
+        args = new String[]{"/hadoop/test/dt/attr/", "/hadoop/test/dt/data/", "/hadoop/test/dt/", "/hadoop/test/dt/model/"};
         // 解析命令行里的额外Hadoop相关参数
         if (args.length < 4) {
             System.out
                     .println("Usage: DecisionTree.jar MetaFile DataSet TmpWorkingDir TargetModelFilePath");
             return;
         }
+
         // 存储数据属性元信息的文件的路径
-        String attributesMetaInfoPath = args[0];
+        String attributesMetaInfoPath = args[0] + "names";
+        //在HDFS上创建数据根目录
+        Files.mkdirFolder(args[0]);
+        Files.uploadFile("./input_path/dt/attr/", "names", args[0]);
+
         // 训练集数据文件所在路径
         String dataSetPath = args[1];
+        Files.mkdirFolder(dataSetPath);
+        Files.uploadFile("./input_path/dt/data/", "train_data", dataSetPath);
+
         // 当前统计结果所在文件夹的路径
         String statisticFilePath = args[2] + "/static";
+        Files.deleteFile(statisticFilePath);
+
         // 当前层节点队列文件的路径
         String nodeRuleQueueFilePath = args[2] + "/queue";
+        Files.deleteFile(nodeRuleQueueFilePath);
         // 模型文件存储路径
-        String modelFilePath = args[3];
+        String modelFilePath = args[3] + "model";
+        Files.deleteFile(modelFilePath);
+
 
         // 载入属性元信息
         loadAttributeRange(attributesMetaInfoPath);
         // 当前层的划分规则队列
-        Queue<Rule> currentQueue = new LinkedList<Rule>();
+        Queue<Rule> currentQueue;
         // 下一层的划分规则队列
         Queue<Rule> newQueue = new LinkedList<Rule>();
 
@@ -101,7 +116,7 @@ public class DecisionTreeDriver {
                     iterateCount);
             // 从输出结果中读取统计好的信息
             Map<Integer, NodeStatisticInfo> nodeStatisticInfos =
-                    new HashMap<Integer, NodeStatisticInfo>();
+                    new HashMap<>();
             loadStatisticInfo(nodeStatisticInfos, newstatisticFilePath);
             // 对于当前层的每个节点进行处理
             int i = 0;
@@ -161,7 +176,7 @@ public class DecisionTreeDriver {
     private static void runMapReduceJob(String dataSetPath,
                                         String nodeRuleQueueFilePath, String statisticFilePath, int itCount)
             throws Exception {
-        conf = new Configuration();
+        conf = Conf.get();
         // 配置全局队列
         // 将规则文件加入Cache
         DistributedCache
@@ -169,7 +184,7 @@ public class DecisionTreeDriver {
         System.err.println("NODE_RULE_URI:"
                 + new Path(nodeRuleQueueFilePath).toUri());
         org.apache.hadoop.mapreduce.Job job =
-                new org.apache.hadoop.mapreduce.Job(conf, "MR_DecisionTree-" + itCount);
+                org.apache.hadoop.mapreduce.Job.getInstance(conf, "MR_DecisionTree-" + itCount);
         job.setJarByClass(DecisionTreeDriver.class);
         // 设置Map阶段配置
         job.setMapOutputKeyClass(Text.class);

@@ -1,19 +1,18 @@
 package com.song.nj.hadoop.mr.decisiontree.program;
 
-import datatype.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
-
+import com.song.nj.hadoop.mr.decisiontree.datatype.Rule;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * 决策树算法的Mapper类。
