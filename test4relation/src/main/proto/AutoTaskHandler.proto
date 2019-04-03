@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.daml.progress;
+
+option java_multiple_files = true;
+option java_package = "com.daml.data.server.service";
+option java_outer_classname = "AutoTaskHandleProto";
+
+service AutoTaskHandle {
+    rpc taskhandle (TaskHandleRequest) returns (TaskHandleReplay) {
+    }
+}
+
+//request message
+message TaskHandleRequest {
+    string message_id = 1;
+    string process_type = 2;
+}
+
+//response message
+message TaskHandleReplay {
+    string message_id = 1;
+    string info = 2;
+}
