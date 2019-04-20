@@ -13,6 +13,7 @@
         <module name="test4kafka" />
         <module name="test4redis" />
         <module name="test4relation" />
+        <module name="test4zk" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,6 +30,7 @@
       <module name="test4kafka" options="" />
       <module name="test4redis" options="" />
       <module name="test4relation" options="" />
+      <module name="test4zk" options="" />
     </option>
   </component>
 </project>

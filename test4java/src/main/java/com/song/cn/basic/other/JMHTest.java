@@ -1,4 +1,4 @@
-package com.song.cn.basic;
+package com.song.cn.basic.other;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;

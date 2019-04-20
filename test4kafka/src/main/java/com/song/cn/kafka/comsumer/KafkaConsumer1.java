@@ -9,7 +9,6 @@ import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -74,7 +73,8 @@ public class KafkaConsumer1 {
                 long lastOffset = partitionRecords.get(partitionRecords.size()-1).offset();
                 //提交offset
                 consumer.commitSync(Collections.singletonMap(partition,new OffsetAndMetadata(lastOffset+1)));
-                total+=partitionRecords.size();
+                total += partitionRecords.size();
+                consumer.position()
             }
             //total+=records.count();
             i++;

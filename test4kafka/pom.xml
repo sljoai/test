@@ -26,8 +26,8 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.11</artifactId>
-            <version>0.10.2.2</version>
+            <artifactId>kafka_2.12</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
     </dependencies>

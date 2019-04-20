@@ -1,4 +1,4 @@
-package com.song.cn.basic;
+package com.song.cn.basic.collection;
 
 import java.util.HashMap;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package com.song.cn.basic;
+package com.song.cn.basic.algorithm;
 
 import java.util.*;
 

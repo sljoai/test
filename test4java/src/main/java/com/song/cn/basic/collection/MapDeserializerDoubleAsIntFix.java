@@ -1,4 +1,4 @@
-package com.song.cn.basic;
+package com.song.cn.basic.collection;
 
 /**
  * 最近在研究网络请求数据解析的问题，发现json数据被强制转换为map结构的时候，会出现int变成double的问题
