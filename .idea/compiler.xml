@@ -6,23 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="test4bf" />
-        <module name="test4grpc" />
         <module name="test4hadoop" />
-        <module name="test4java" />
         <module name="test4kafka" />
+        <module name="test4java" />
+        <module name="test4grpc" />
+        <module name="test4zk" />
+        <module name="test4bf" />
         <module name="test4redis" />
         <module name="test4relation" />
-        <module name="test4zk" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="testmr" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jdk8" options="" />
       <module name="test4bf" options="" />
       <module name="test4grpc" options="" />
       <module name="test4hadoop" options="" />
