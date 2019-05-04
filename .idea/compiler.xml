@@ -16,6 +16,9 @@
         <module name="test4relation" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jdk8.main" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
