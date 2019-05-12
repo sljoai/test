@@ -1,4 +1,4 @@
-namespace java thrift.generated
+namespace java com.song.cn.thrift
 
 # 将数据类型重新定义成Java包含的数据类型
 typedef i16 short
