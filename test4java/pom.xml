@@ -49,5 +49,11 @@
             <version>${jmh.version}</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.9.1</version>
+        </dependency>
     </dependencies>
 </project>

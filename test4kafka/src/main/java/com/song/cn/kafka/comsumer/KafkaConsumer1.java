@@ -74,7 +74,6 @@ public class KafkaConsumer1 {
                 //提交offset
                 consumer.commitSync(Collections.singletonMap(partition,new OffsetAndMetadata(lastOffset+1)));
                 total += partitionRecords.size();
-                consumer.position()
             }
             //total+=records.count();
             i++;
