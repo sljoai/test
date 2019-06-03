@@ -6,29 +6,46 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="test4hadoop" />
-        <module name="test4kafka" />
-        <module name="test4java" />
-        <module name="test4grpc" />
-        <module name="test4zk" />
         <module name="test4bf" />
+        <module name="test4grpc" />
+        <module name="test4hadoop" />
+        <module name="test4java" />
+        <module name="test4kafka" />
+        <module name="test4nlp" />
         <module name="test4redis" />
         <module name="test4relation" />
+        <module name="test4zk" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.song.njtech.cn.test4netty.main" target="1.8" />
+      <module name="com.song.njtech.cn.test4netty.test" target="1.8" />
       <module name="jdk8.main" target="1.8" />
+      <module name="lftest" target="8" />
+      <module name="test" target="8" />
+      <module name="test4bf" target="1.7" />
+      <module name="test4grpc" target="8" />
+      <module name="test4hadoop" target="1.8" />
+      <module name="test4java" target="1.8" />
+      <module name="test4kafka" target="7" />
+      <module name="test4nlp" target="8" />
+      <module name="test4redis" target="1.8" />
+      <module name="test4relation" target="7" />
+      <module name="test4zk" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="jdk8" options="" />
+      <module name="lftest" options="" />
+      <module name="test" options="" />
       <module name="test4bf" options="" />
       <module name="test4grpc" options="" />
       <module name="test4hadoop" options="" />
       <module name="test4java" options="" />
       <module name="test4kafka" options="" />
+      <module name="test4nlp" options="" />
       <module name="test4redis" options="" />
       <module name="test4relation" options="" />
       <module name="test4zk" options="" />
