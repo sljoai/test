@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -27,7 +28,7 @@
       <module name="test4grpc" target="8" />
       <module name="test4hadoop" target="1.8" />
       <module name="test4java" target="1.8" />
-      <module name="test4kafka" target="7" />
+      <module name="test4kafka" target="8" />
       <module name="test4nlp" target="8" />
       <module name="test4redis" target="1.8" />
       <module name="test4relation" target="7" />
