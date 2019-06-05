@@ -16,8 +16,6 @@
 
 package io.grpc.examples.errorhandling;
 
-import static com.google.common.util.concurrent.MoreExecutors.directExecutor;
-
 import com.google.common.base.Verify;
 import com.google.common.base.VerifyException;
 import com.google.common.util.concurrent.FutureCallback;
@@ -25,14 +23,7 @@ import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.Uninterruptibles;
 import com.google.rpc.DebugInfo;
-import io.grpc.CallOptions;
-import io.grpc.ClientCall;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
-import io.grpc.Metadata;
-import io.grpc.Server;
-import io.grpc.ServerBuilder;
-import io.grpc.Status;
+import io.grpc.*;
 import io.grpc.examples.helloworld.GreeterGrpc;
 import io.grpc.examples.helloworld.GreeterGrpc.GreeterBlockingStub;
 import io.grpc.examples.helloworld.GreeterGrpc.GreeterFutureStub;
@@ -41,10 +32,13 @@ import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.protobuf.ProtoUtils;
 import io.grpc.stub.StreamObserver;
+
+import javax.annotation.Nullable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
-import javax.annotation.Nullable;
+
+import static com.google.common.util.concurrent.MoreExecutors.directExecutor;
 
 /**
  * Shows how to setting and reading RPC error details.
@@ -73,7 +67,7 @@ public class DetailErrorSample {
   private ManagedChannel channel;
 
   void run() throws Exception {
-    Server server = ServerBuilder.forPort(0).addService(new GreeterGrpc.GreeterImplBase() {
+    Server server = ServerBuilder.forPort(0).addService(new GreeterGrpc.AbstractGreeter() {
       @Override
       public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
         Metadata trailers = new Metadata();

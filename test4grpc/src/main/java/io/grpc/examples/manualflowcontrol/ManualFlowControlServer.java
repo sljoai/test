@@ -32,7 +32,7 @@ public class ManualFlowControlServer {
 
   public static void main(String[] args) throws InterruptedException, IOException {
     // Service class implementation
-    StreamingGreeterGrpc.StreamingGreeterImplBase svc = new StreamingGreeterGrpc.StreamingGreeterImplBase() {
+    StreamingGreeterGrpc.AbstractStreamingGreeter svc = new StreamingGreeterGrpc.AbstractStreamingGreeter() {
       @Override
       public StreamObserver<HelloRequest> sayHelloStreaming(final StreamObserver<HelloReply> responseObserver) {
         // Set up manual flow control for the request stream. It feels backwards to configure the request

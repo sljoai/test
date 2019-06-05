@@ -38,6 +38,7 @@ import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.stub.StreamObserver;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
+
 import java.util.logging.Logger;
 
 /**
@@ -91,7 +92,7 @@ public class SslHelloWorldServer {
     server.blockUntilShutdown();
   }
 
-  static class GreeterImpl extends GreeterGrpc.GreeterImplBase {
+  static class GreeterImpl extends GreeterGrpc.AbstractGreeter {
     @Override
     public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
       HelloReply reply = HelloReply.newBuilder().setMessage("Hello " + req.getName()).build();

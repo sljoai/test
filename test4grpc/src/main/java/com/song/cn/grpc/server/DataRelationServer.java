@@ -65,7 +65,7 @@ public class DataRelationServer {
 
     //实现 或 定义一个服务接口类
 
-    private class DataRelationImpl extends DataRelationGreeterGrpc.DataRelationGreeterImplBase{
+    private class DataRelationImpl extends DataRelationGreeterGrpc.AbstractDataRelationGreeter {
 
         private final Logger LOG = LoggerFactory.getLogger(DataRelationImpl.class);
         @Override

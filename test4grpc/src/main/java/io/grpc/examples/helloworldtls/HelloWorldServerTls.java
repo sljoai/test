@@ -124,7 +124,7 @@ public class HelloWorldServerTls {
         server.blockUntilShutdown();
     }
 
-    static class GreeterImpl extends GreeterGrpc.GreeterImplBase {
+    static class GreeterImpl extends GreeterGrpc.AbstractGreeter {
 
         @Override
         public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {

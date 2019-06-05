@@ -16,12 +16,13 @@
 
 package io.grpc.examples.alts;
 
-import io.grpc.alts.AltsServerBuilder;
 import io.grpc.Server;
-import io.grpc.examples.helloworld.GreeterGrpc.GreeterImplBase;
+import io.grpc.alts.AltsServerBuilder;
+import io.grpc.examples.helloworld.GreeterGrpc.AbstractGreeter;
 import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.stub.StreamObserver;
+
 import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.logging.Level;
@@ -31,7 +32,7 @@ import java.util.logging.Logger;
  * An example gRPC server that uses ALTS. Shows how to do a Unary RPC. This example can only be run
  * on Google Cloud Platform.
  */
-public final class HelloWorldAltsServer extends GreeterImplBase {
+public final class HelloWorldAltsServer extends AbstractGreeter {
   private static final Logger logger = Logger.getLogger(HelloWorldAltsServer.class.getName());
   private Server server;
   private int port = 10001;
