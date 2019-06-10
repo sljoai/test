@@ -5,17 +5,31 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.song.njtech.cn.test4netty.iml" filepath="$PROJECT_DIR$/.idea/modules/com.song.njtech.cn.test4netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.song.njtech.cn.test4netty.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.song.njtech.cn.test4netty.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.song.njtech.cn.test4netty.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.song.njtech.cn.test4netty.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdk8.iml" filepath="$PROJECT_DIR$/.idea/modules/jdk8.iml" group="jdk8" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdk8.iml" filepath="$PROJECT_DIR$/.idea/modules/jdk8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test.iml" filepath="$PROJECT_DIR$/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/test.iml" filepath="$PROJECT_DIR$/.idea/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4bf/test4bf.iml" filepath="$PROJECT_DIR$/test4bf/test4bf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4bf/test4bf.iml" filepath="$PROJECT_DIR$/test4bf/test4bf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4flink/test4flink.iml" filepath="$PROJECT_DIR$/test4flink/test4flink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4grpc/test4grpc.iml" filepath="$PROJECT_DIR$/test4grpc/test4grpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4grpc/test4grpc.iml" filepath="$PROJECT_DIR$/test4grpc/test4grpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4hadoop/test4hadoop.iml" filepath="$PROJECT_DIR$/test4hadoop/test4hadoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4hadoop/test4hadoop.iml" filepath="$PROJECT_DIR$/test4hadoop/test4hadoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4java/test4java.iml" filepath="$PROJECT_DIR$/test4java/test4java.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4java/test4java.iml" filepath="$PROJECT_DIR$/test4java/test4java.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4kafka/test4kafka.iml" filepath="$PROJECT_DIR$/test4kafka/test4kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4kafka/test4kafka.iml" filepath="$PROJECT_DIR$/test4kafka/test4kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test4netty.iml" filepath="$PROJECT_DIR$/.idea/modules/test4netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test4netty.main.iml" filepath="$PROJECT_DIR$/.idea/modules/test4netty.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test4netty.test.iml" filepath="$PROJECT_DIR$/.idea/modules/test4netty.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4nlp/test4nlp.iml" filepath="$PROJECT_DIR$/test4nlp/test4nlp.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4python/test4python.iml" filepath="$PROJECT_DIR$/test4python/test4python.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4redis/test4redis.iml" filepath="$PROJECT_DIR$/test4redis/test4redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4redis/test4redis.iml" filepath="$PROJECT_DIR$/test4redis/test4redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4relation/test4relation.iml" filepath="$PROJECT_DIR$/test4relation/test4relation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4relation/test4relation.iml" filepath="$PROJECT_DIR$/test4relation/test4relation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4zk/test4zk.iml" filepath="$PROJECT_DIR$/test4zk/test4zk.iml" />
       <module fileurl="file://$PROJECT_DIR$/test4zk/test4zk.iml" filepath="$PROJECT_DIR$/test4zk/test4zk.iml" />
     </modules>
   </component>

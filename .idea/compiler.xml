@@ -7,15 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="test4bf" />
-        <module name="test4grpc" />
         <module name="test4hadoop" />
-        <module name="test4java" />
         <module name="test4kafka" />
-        <module name="test4nlp" />
-        <module name="test4redis" />
-        <module name="test4relation" />
+        <module name="test4java" />
+        <module name="test4grpc" />
         <module name="test4zk" />
+        <module name="test4nlp" />
+        <module name="test4flink" />
+        <module name="test4redis" />
+        <module name="test4bf" />
+        <module name="test4relation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,10 +26,13 @@
       <module name="lftest" target="8" />
       <module name="test" target="8" />
       <module name="test4bf" target="1.7" />
+      <module name="test4flink" target="8" />
       <module name="test4grpc" target="8" />
       <module name="test4hadoop" target="1.8" />
       <module name="test4java" target="1.8" />
       <module name="test4kafka" target="8" />
+      <module name="test4netty.main" target="1.8" />
+      <module name="test4netty.test" target="1.8" />
       <module name="test4nlp" target="8" />
       <module name="test4redis" target="1.8" />
       <module name="test4relation" target="7" />
@@ -42,6 +46,7 @@
       <module name="lftest" options="" />
       <module name="test" options="" />
       <module name="test4bf" options="" />
+      <module name="test4flink" options="" />
       <module name="test4grpc" options="" />
       <module name="test4hadoop" options="" />
       <module name="test4java" options="" />

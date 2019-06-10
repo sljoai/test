@@ -12,14 +12,15 @@ public class SocketTextStreamWordCount {
 
     public static void main(String[] args) throws Exception {
         //参数检查
-        if (args.length != 2) {
-            System.err.println("USAGE:\nSocketTextStreamWordCount <hostname> <port>");
-            return;
-        }
+//        if (args.length != 2) {
+//            System.err.println("USAGE:\nSocketTextStreamWordCount <hostname> <port>");
+//            return;
+//        }
 
         String hostname = args[0];
+//        String hostname = "127.0.0.1";
         Integer port = Integer.parseInt(args[1]);
-
+//        Integer port = 8081;
 
         // set up the streaming execution environment
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
