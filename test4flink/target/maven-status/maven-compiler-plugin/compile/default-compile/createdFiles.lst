@@ -1,0 +1,4 @@
+com\song\cn\flink\StreamingJob.class
+com\song\cn\flink\SocketTextStreamWordCount.class
+com\song\cn\flink\BatchJob.class
+com\song\cn\flink\SocketTextStreamWordCount$LineSplitter.class
