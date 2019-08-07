@@ -55,5 +55,12 @@
             <artifactId>stanford-corenlp</artifactId>
             <version>3.9.1</version>
         </dependency>
+
+        <!--Akka Actor-->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_2.10</artifactId>
+            <version>2.3.6</version>
+        </dependency>
     </dependencies>
 </project>
