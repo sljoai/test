@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.song.cn.flink;
+package com.song.cn.flink.first;
 
 import org.apache.flink.api.java.ExecutionEnvironment;
 

@@ -1,4 +1,4 @@
-package com.song.cn.flink;
+package com.song.cn.flink.first;
 
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
