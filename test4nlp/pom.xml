@@ -30,6 +30,12 @@
             <version>3.8.0</version>
             <classifier>models-chinese</classifier>
         </dependency>
+
+        <dependency>
+            <groupId>com.hankcs</groupId>
+            <artifactId>hanlp</artifactId>
+            <version>portable-1.7.5</version>
+        </dependency>
     </dependencies>
 
 
