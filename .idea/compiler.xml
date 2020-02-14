@@ -13,9 +13,11 @@
         <module name="test4grpc" />
         <module name="test4zk" />
         <module name="test4nlp" />
+        <module name="test4spark" />
         <module name="test4flink" />
         <module name="test4redis" />
         <module name="test4bf" />
+        <module name="test4springboot" />
         <module name="test4relation" />
       </profile>
     </annotationProcessing>
@@ -24,9 +26,10 @@
       <module name="com.song.njtech.cn.test4netty.test" target="1.8" />
       <module name="jdk8.main" target="1.8" />
       <module name="lftest" target="8" />
+      <module name="log-compute" target="1.8" />
       <module name="test" target="8" />
       <module name="test4bf" target="1.7" />
-      <module name="test4flink" target="8" />
+      <module name="test4flink" target="1.8" />
       <module name="test4grpc" target="8" />
       <module name="test4hadoop" target="1.8" />
       <module name="test4java" target="1.8" />
@@ -36,6 +39,8 @@
       <module name="test4nlp" target="8" />
       <module name="test4redis" target="1.8" />
       <module name="test4relation" target="7" />
+      <module name="test4spark" target="1.7" />
+      <module name="test4springboot" target="1.8" />
       <module name="test4zk" target="8" />
     </bytecodeTargetLevel>
   </component>
@@ -44,6 +49,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="jdk8" options="" />
       <module name="lftest" options="" />
+      <module name="log-compute" options="" />
       <module name="test" options="" />
       <module name="test4bf" options="" />
       <module name="test4flink" options="" />
@@ -54,6 +60,8 @@
       <module name="test4nlp" options="" />
       <module name="test4redis" options="" />
       <module name="test4relation" options="" />
+      <module name="test4spark" options="" />
+      <module name="test4springboot" options="" />
       <module name="test4zk" options="" />
     </option>
   </component>
