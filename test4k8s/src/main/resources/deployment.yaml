@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: hello
+      labels:
+        app: hello
+    spec:
+      containers:
+        - name: hello
+          image: insight.registry.com:5000/insight/datarelation:v1.0
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: hello
