@@ -11,5 +11,12 @@
 
     <artifactId>test4k8s</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.kubernetes</groupId>
+            <artifactId>client-java-extended</artifactId>
+            <version>6.0.1</version>
+        </dependency>
+    </dependencies>
 
 </project>
