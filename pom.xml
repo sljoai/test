@@ -33,6 +33,9 @@
         <module>test4nlp</module>
         <module>test4springboot</module>
         <module>test4spark</module>
+        <module>test4spring</module>
+        <module>test4k8s</module>
+        <module>test4spark2scala</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
