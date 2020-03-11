@@ -60,13 +60,13 @@
         <dependency>
             <groupId>io.fabric8</groupId>
             <artifactId>kubernetes-client</artifactId>
-            <version>4.3.0</version>
+            <version>4.8.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.fabric8/kubernetes-model -->
         <dependency>
             <groupId>io.fabric8</groupId>
             <artifactId>kubernetes-model</artifactId>
-            <version>4.3.0</version>
+            <version>4.8.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.fabric8/fabric-utils -->
         <dependency>
