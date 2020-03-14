@@ -32,14 +32,23 @@ public class PortForwardExample {
 
     public static void main(String args[]) {
         //设置配置文件路径
-        System.setProperty("kubeconfig", "./conf/admin.conf");
+//        System.setProperty("kubeconfig", "./conf/admin.conf");
+//        System.setProperty("kubernetes.trust.certificates","true");
         //API Server地址
         String master = "https://192.168.80.129:6443";
 
         // 创建配置对象config
-        Config config = new ConfigBuilder().withMasterUrl(master).build();
+        Config config = new ConfigBuilder()
+                .withMasterUrl(master)
+                .withClientCertFile("./conf/client.crt")
+                .withClientKeyFile("./conf/client.key")
+                .withCaCertFile("./conf/ca.crt")
+//                .withOauthToken("")
+//                .withTrustCerts(false)
+//                .withUsername("fabric8")
+                .build();
 
-        OkHttpClient okHttpClient = null;
+        OkHttpClient okHttpClient;
         //创建访问客户端
         try (final KubernetesClient client = new DefaultKubernetesClient(config)) {
             String namespace = "default";
@@ -66,9 +75,11 @@ public class PortForwardExample {
                 }
                 //删除
                 if (count == 0) {
-                    client.pods().inNamespace(namespace)
+                    client.pods()
+                            .inNamespace(namespace)
                             .withName(podName)
-                            .delete();
+                            .delete()
+                    ;
                 }
                 count++;
             }
@@ -128,6 +139,7 @@ public class PortForwardExample {
             Thread.sleep(100 * 1000);
         } catch (Exception e) {
             log("Exception occurred: ", e.getMessage());
+            e.printStackTrace();
         } finally {
             /*if (okHttpClient != null) {
                 try {

@@ -38,7 +38,9 @@ public class PodPriorityExample {
         Config config = new ConfigBuilder().withMasterUrl(master).build();
         try (final KubernetesClient client = new DefaultKubernetesClient(config)) {
             PriorityClass priorityClass = new PriorityClassBuilder()
-                    .withNewMetadata().withName("high-priority").endMetadata()
+                    .withNewMetadata()
+                    .withName("high-priority")
+                    .endMetadata()
                     .withValue(new Integer(100000))
                     .withGlobalDefault(false)
                     .withDescription("This priority class should be used for XYZ service pods only.")
@@ -46,9 +48,16 @@ public class PodPriorityExample {
             client.scheduling().priorityClass().create(priorityClass);
 
             client.pods().inNamespace("default").create(new PodBuilder()
-                    .withNewMetadata().withName("nginx").withLabels(Collections.singletonMap("env", "test")).endMetadata()
+                    .withNewMetadata()
+                    .withName("nginx")
+                    .withLabels(Collections.singletonMap("env", "test"))
+                    .endMetadata()
                     .withNewSpec()
-                    .addToContainers(new ContainerBuilder().withName("nginx").withImage("nginx").withImagePullPolicy("IfNotPresent").build())
+                    .addToContainers(new ContainerBuilder()
+                            .withName("nginx")
+                            .withImage("nginx")
+                            .withImagePullPolicy("IfNotPresent")
+                            .build())
                     .withPriorityClassName("high-priority")
                     .endSpec()
                     .build()

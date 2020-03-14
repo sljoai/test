@@ -32,10 +32,17 @@ public class PodPresetExamples {
     private static final Logger logger = LoggerFactory.getLogger(PodPresetExamples.class);
 
     public static void main(String args[]) {
-        System.setProperty("kubeconfig", "./conf/admin.conf");
+//        System.setProperty("kubeconfig", "./conf/admin.conf");
+//        System.setProperty("kubernetes.trust.certificates","true");
         String master = "https://192.168.80.129:6443/";
 
-        Config config = new ConfigBuilder().withMasterUrl(master).build();
+        Config config = new ConfigBuilder()
+                .withMasterUrl(master)
+                .withClientCertFile("./conf/client.crt")
+                .withClientKeyFile("./conf/client.key")
+                .withCaCertFile("./conf/ca.crt")
+//                .withUsername("fabric8")
+                .build();
         try (final KubernetesClient client = new DefaultKubernetesClient(config)) {
             String namespace = "default";
             log("namespace", namespace);

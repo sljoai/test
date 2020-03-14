@@ -28,9 +28,9 @@ public class PodLogExample {
     private static final Logger logger = LoggerFactory.getLogger(PodLogExample.class);
 
     public static void main(String[] args) {
-        System.setProperty("kubeconfig", "./conf/admin.conf");
         String podName = "nginx";
         String namespace = "default";
+        System.setProperty("kubeconfig", "./conf/admin.conf");
         String master = "https://192.168.80.129:6443/";
 
         System.out.println("Log of pod " + podName + " in " + namespace + " is:");

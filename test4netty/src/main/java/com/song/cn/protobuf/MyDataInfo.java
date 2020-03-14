@@ -202,7 +202,7 @@ public final class MyDataInfo {
         }
 
         @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
             return com.song.cn.protobuf.MyDataInfo.internal_static_com_song_cn_protobuf_MyMessage_fieldAccessorTable
                     .ensureFieldAccessorsInitialized(
@@ -1583,8 +1583,8 @@ public final class MyDataInfo {
                                 done = true;
                             }
                             break;
-                        }
-                    }
+            }
+          }
                 }
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
                 throw e.setUnfinishedMessage(this);
@@ -1615,7 +1615,7 @@ public final class MyDataInfo {
         private volatile java.lang.Object name_;
 
         /**
-         * <code>optional string name = 1;</code>
+     * <code>optional string name = 1;</code>
          */
         public boolean hasName() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
@@ -2482,8 +2482,8 @@ public final class MyDataInfo {
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
             return com.song.cn.protobuf.MyDataInfo.internal_static_com_song_cn_protobuf_Dog_fieldAccessorTable
-                    .ensureFieldAccessorsInitialized(
-                            com.song.cn.protobuf.MyDataInfo.Dog.class, com.song.cn.protobuf.MyDataInfo.Dog.Builder.class);
+          .ensureFieldAccessorsInitialized(
+                  com.song.cn.protobuf.MyDataInfo.Dog.class, com.song.cn.protobuf.MyDataInfo.Dog.Builder.class);
         }
 
         private int bitField0_;
@@ -3209,7 +3209,7 @@ public final class MyDataInfo {
         }
 
         @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
             return com.song.cn.protobuf.MyDataInfo.internal_static_com_song_cn_protobuf_Cat_fieldAccessorTable
                     .ensureFieldAccessorsInitialized(
@@ -3248,19 +3248,19 @@ public final class MyDataInfo {
         /**
          * <code>optional string name = 1;</code>
          */
-        public com.google.protobuf.ByteString
-        getNameBytes() {
-            java.lang.Object ref = name_;
-            if (ref instanceof java.lang.String) {
-                com.google.protobuf.ByteString b =
-                        com.google.protobuf.ByteString.copyFromUtf8(
-                                (java.lang.String) ref);
-                name_ = b;
-                return b;
-            } else {
-                return (com.google.protobuf.ByteString) ref;
-            }
+    public com.google.protobuf.ByteString
+    getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b =
+                    com.google.protobuf.ByteString.copyFromUtf8(
+                            (java.lang.String) ref);
+            name_ = b;
+            return b;
+        } else {
+            return (com.google.protobuf.ByteString) ref;
         }
+    }
 
         public static final int CITY_FIELD_NUMBER = 2;
         private volatile java.lang.Object city_;
@@ -3870,13 +3870,13 @@ public final class MyDataInfo {
         @java.lang.Deprecated
         public static final com.google.protobuf.Parser<Cat>
                 PARSER = new com.google.protobuf.AbstractParser<Cat>() {
-            @java.lang.Override
-            public Cat parsePartialFrom(
-                    com.google.protobuf.CodedInputStream input,
-                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-                    throws com.google.protobuf.InvalidProtocolBufferException {
-                return new Cat(input, extensionRegistry);
-            }
+      @java.lang.Override
+      public Cat parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Cat(input, extensionRegistry);
+      }
         };
 
         public static com.google.protobuf.Parser<Cat> parser() {
@@ -3953,29 +3953,29 @@ public final class MyDataInfo {
                         }, assigner);
         internal_static_com_song_cn_protobuf_MyMessage_descriptor =
                 getDescriptor().getMessageTypes().get(0);
-        internal_static_com_song_cn_protobuf_MyMessage_fieldAccessorTable = new
-                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-                internal_static_com_song_cn_protobuf_MyMessage_descriptor,
-                new java.lang.String[]{"DataType", "Person", "Dog", "Cat", "DataBody",});
-        internal_static_com_song_cn_protobuf_Person_descriptor =
-                getDescriptor().getMessageTypes().get(1);
-        internal_static_com_song_cn_protobuf_Person_fieldAccessorTable = new
-                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-                internal_static_com_song_cn_protobuf_Person_descriptor,
-                new java.lang.String[]{"Name", "Age", "Address",});
-        internal_static_com_song_cn_protobuf_Dog_descriptor =
-                getDescriptor().getMessageTypes().get(2);
-        internal_static_com_song_cn_protobuf_Dog_fieldAccessorTable = new
-                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-                internal_static_com_song_cn_protobuf_Dog_descriptor,
-                new java.lang.String[]{"Name", "Age",});
-        internal_static_com_song_cn_protobuf_Cat_descriptor =
-                getDescriptor().getMessageTypes().get(3);
-        internal_static_com_song_cn_protobuf_Cat_fieldAccessorTable = new
-                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-                internal_static_com_song_cn_protobuf_Cat_descriptor,
-                new java.lang.String[]{"Name", "City",});
-    }
+    internal_static_com_song_cn_protobuf_MyMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_song_cn_protobuf_MyMessage_descriptor,
+        new java.lang.String[] { "DataType", "Person", "Dog", "Cat", "DataBody", });
+    internal_static_com_song_cn_protobuf_Person_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_song_cn_protobuf_Person_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_song_cn_protobuf_Person_descriptor,
+        new java.lang.String[] { "Name", "Age", "Address", });
+    internal_static_com_song_cn_protobuf_Dog_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_song_cn_protobuf_Dog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_song_cn_protobuf_Dog_descriptor,
+        new java.lang.String[] { "Name", "Age", });
+    internal_static_com_song_cn_protobuf_Cat_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_song_cn_protobuf_Cat_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_song_cn_protobuf_Cat_descriptor,
+        new java.lang.String[] { "Name", "City", });
+  }
 
-    // @@protoc_insertion_point(outer_class_scope)
+  // @@protoc_insertion_point(outer_class_scope)
 }

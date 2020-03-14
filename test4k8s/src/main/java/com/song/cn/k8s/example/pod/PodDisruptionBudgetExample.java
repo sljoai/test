@@ -25,11 +25,15 @@ import org.slf4j.LoggerFactory;
 import java.util.Collections;
 
 
+/**
+ * PDB能够限制同时中断的pod的数量,以保证集群的高可用性
+ */
 public class PodDisruptionBudgetExample {
     private static final Logger logger = LoggerFactory.getLogger(PodDisruptionBudgetExample.class);
 
     public static void main(String args[]) throws InterruptedException {
-        String master = "https://192.168.99.100:8443/";
+        System.setProperty("kubeconfig", "./conf/admin.conf");
+        String master = "https://192.168.80.129:6443/";
         if (args.length == 1) {
             master = args[0];
         }
@@ -40,7 +44,9 @@ public class PodDisruptionBudgetExample {
             final String namespace = "default";
 
             PodDisruptionBudget podDisruptionBudget = new PodDisruptionBudgetBuilder()
-                    .withNewMetadata().withName("zk-pkb").endMetadata()
+                    .withNewMetadata()
+                    .withName("zk-pkb")
+                    .endMetadata()
                     .withNewSpec()
                     .withMaxUnavailable(new IntOrString("1%"))
                     .withNewSelector()
