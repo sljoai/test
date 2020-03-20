@@ -33,6 +33,7 @@ public class PortForwardExample {
     public static void main(String args[]) {
         //设置配置文件路径
 //        System.setProperty("kubeconfig", "./conf/admin.conf");
+        System.setProperty("kubeconfig", "./conf/insight.kubeconfig");
 //        System.setProperty("kubernetes.trust.certificates","true");
         //API Server地址
         String master = "https://192.168.80.129:6443";
@@ -40,9 +41,9 @@ public class PortForwardExample {
         // 创建配置对象config
         Config config = new ConfigBuilder()
                 .withMasterUrl(master)
-                .withClientCertFile("./conf/client.crt")
+/*                .withClientCertFile("./conf/client.crt")
                 .withClientKeyFile("./conf/client.key")
-                .withCaCertFile("./conf/ca.crt")
+                .withCaCertFile("./conf/ca.crt")*/
 //                .withOauthToken("")
 //                .withTrustCerts(false)
 //                .withUsername("fabric8")
@@ -82,6 +83,7 @@ public class PortForwardExample {
                     ;
                 }
                 count++;
+                Thread.sleep(1000);
             }
 
             //在指定的命名空间中创建Pod对象

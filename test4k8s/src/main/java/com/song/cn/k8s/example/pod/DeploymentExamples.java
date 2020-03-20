@@ -34,17 +34,19 @@ public class DeploymentExamples {
 
     public static void main(String[] args) throws InterruptedException {
 //        System.setProperty("kubeconfig", "./conf/admin.conf");
+        System.setProperty("kubeconfig", "./conf/insight.kubeconfig");
         String master = "https://192.168.80.129:6443/";
         Config config = new ConfigBuilder()
                 .withMasterUrl(master)
-                .withClientCertFile("./conf/client.crt")
-                .withClientKeyFile("./conf/client.key")
-                .withCaCertFile("./conf/ca.crt")
+//                .withClientCertFile("./conf/client.crt")
+//                .withClientKeyFile("./conf/client.key")
+//                .withCaCertFile("./conf/ca.crt")
                 .build();
         KubernetesClient client = new DefaultKubernetesClient(config);
 
         String namespace = "test";
         String deploymentName = "nginx";
+        String serviceAccountName = "fabric8";
 
         try {
             // 创建一个Namespace
@@ -54,19 +56,55 @@ public class DeploymentExamples {
                     .addToLabels("this", "rocks")
                     .endMetadata()
                     .build();
-            log("Created namespace", client.namespaces().createOrReplace(ns));
+            Namespace oldName = client
+                    .namespaces()
+                    .withName(namespace)
+                    .get();
+            //Namespace不存在创建，存在就更新
+            if (oldName == null) {
+                log("Created namespace", client
+                        .namespaces()
+                        .createOrReplace(ns)
+                )
+                ;
+            } else {
+                log("Update namespace", client
+                        .namespaces()
+                        .withName(namespace)
+                        .patch(ns)
+                )
+                ;
+            }
 
             //创建一个ServiceAccount
             ServiceAccount fabric8 = new ServiceAccountBuilder()
                     .withNewMetadata()
-                    .withName("fabric8")
+                    .withName(serviceAccountName)
                     .endMetadata()
                     .build();
-            log("Created serviceAccount",
-                    client.serviceAccounts()
-                            .inNamespace(namespace)
-                            .createOrReplace(fabric8)
-            );
+            ServiceAccount oldServiceAccount = client
+                    .serviceAccounts()
+                    .inNamespace(namespace)
+                    .withName(serviceAccountName)
+                    .get();
+            //不存在创建，存在更新
+            if (oldServiceAccount == null) {
+                log("Created serviceAccount",
+                        client.serviceAccounts()
+                                .inNamespace(namespace)
+                                .createOrReplace(fabric8)
+                );
+
+            } else {
+
+                log("Update serviceAccount",
+                        client.serviceAccounts()
+                                .inNamespace(namespace)
+                                .withName(serviceAccountName)
+                                //.patch(fabric8)
+                                .createOrReplaceWithNew()
+                );
+            }
 
             //创建Deployment
             for (int i = 0; i < 2; i++) {
@@ -98,18 +136,43 @@ public class DeploymentExamples {
                         .endSpec()
                         .build();
 
+                //判断Deployment是否存在，存在先删除
+                /*Deployment olderDeployment = client
+                        .apps()
+                        .deployments()
+                        .withName(deploymentName)
+                        .get();
+                if(olderDeployment !=null){
+                    client.resource(olderDeployment)
+                            .deletingExisting()
+                    ;
+                }else{
+                    deployment = client
+                            .apps()
+                            .deployments()
+                            .inNamespace(namespace)
+                            .createOrReplace(deployment)
+                    ;
+                }*/
+                Deployment newDeployment = client
+                        .apps()
+                        .deployments()
+                        .inNamespace(namespace)
+                        .createOrReplace(deployment);
 
                 //创建Deployment
-                deployment = client.apps().deployments().inNamespace(namespace).create(deployment);
-                log("Created deployment", deployment);
+                log("Created deployment", newDeployment);
 
-                System.err.println("Scaling up:" + deployment.getMetadata().getName());
+                System.err.println("Scaling up:" + newDeployment.getMetadata().getName());
 
+//                deployment.getSpec().setReplicas(2);
                 //扩容Deployment到两个
                 client.apps()
                         .deployments()
                         .inNamespace(namespace)
                         .withName(deploymentName)
+//                        .patch(deployment)
+                        //扩展到两个，等待直到创建完成
                         .scale(2, true)
                 ;
 
@@ -121,13 +184,52 @@ public class DeploymentExamples {
                                 .list()
                                 .getItems()
                 );
-                System.err.println("Deleting:" + deployment.getMetadata().getName());
-                client.resource(deployment).delete();
+                System.err.println("Deleting:" + newDeployment.getMetadata().getName());
+
+                // 删除Deployment
+                int count = 0;
+                while (true) {
+                    //删除Deployment
+                    Deployment oldDeployment = client.apps()
+                            .deployments()
+                            .inNamespace(namespace)
+                            .withName(deploymentName)
+                            .get();
+                    if (oldDeployment == null || count > 10) {
+                        if (count != 0) {
+                            log("Deployment has been deleted!");
+                        }
+                        break;
+                    }
+                    //删除
+                    if (count == 0) {
+                        client.apps()
+                                .deployments()
+                                .inNamespace(namespace)
+                                .withName(deploymentName)
+                                .delete()
+                        ;
+                        //这个接口有问题
+/*                        client.resource(deployment)
+                                .withGracePeriod(10L)
+                                .delete()
+                        ;*/
+                    }
+                    count++;
+                    Thread.sleep(1000);
+                }
             }
             log("Done.");
 
+        } catch (Exception e) {
+            log("error: ", e.getMessage());
+            e.printStackTrace();
         } finally {
-            client.namespaces().withName(namespace).delete();
+            client.namespaces()
+                    .withName(namespace)
+                    .withGracePeriod(0)
+                    .delete()
+            ;
             client.close();
         }
     }
