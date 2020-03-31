@@ -1,0 +1,8 @@
+server:
+  port: 8000
+
+dubbo:
+  application:
+    name: test4sw2demowebapp # Dubbo Consumer名字
+  registry:
+    address: zookeeper://192.168.80.128:2181 # 注册中心地址
