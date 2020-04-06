@@ -6,7 +6,7 @@
 
     <bean id="userFactoryServiceLoader"
           class="org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean">
-        <property name="serviceType" value="com.song.cn.spring.ioc.beans.UserFactory"/>
+        <property name="serviceType" value="com.song.cn.agent.spring.ioc.beans.UserFactory"/>
     </bean>
 
 </beans>

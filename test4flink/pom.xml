@@ -244,7 +244,7 @@
                     <archive>
                         <manifest>
                             <!-- 可以设置jar包的入口类(可选) -->
-                            <mainClass>com.song.cn.flink.state.twopc.Task</mainClass>
+                            <mainClass>com.song.cn.agent.flink.state.twopc.Task</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

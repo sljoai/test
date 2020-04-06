@@ -7,7 +7,7 @@
     <!-- 复用lookup的bean -->
     <import resource="dependency-lookup-context.xml"/>
 
-    <bean name="userRepository" class="com.song.cn.spring.ioc.repository.UserRepository"
+    <bean name="userRepository" class="com.song.cn.agent.spring.ioc.repository.UserRepository"
           autowire="byType"> <!--自动注入-->
 
         <!-- 手动配置 -->
